@@ -1,0 +1,232 @@
+/* @import url('https://fonts.cdnfonts.com/css/elronet-monospace'); */
+/* @import url('https://fonts.cdnfonts.com/css/elronet-monospace'); */
+/* @import url('https://fonts.cdnfonts.com/css/chivo-mono'); */
+@import url('https://fonts.cdnfonts.com/css/vina-sans');
+@import url('https://fonts.cdnfonts.com/css/advent-pro');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-p);
+}
+
+:root {
+    --font-title: 'Vina Sans', sans-serif;
+    --font-p: 'Advent Pro', sans-serif;
+    --bg-primary: #FEE6F6;
+    --hover-links: #A13E4E;
+}
+
+a {
+    color: rgb(8, 8, 8);
+    font-weight: 500;
+}
+
+header {
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem 2.4rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger div {
+    height: 2px;
+    width: 18px;
+    background-color: #A13E4E;
+}
+
+header .logo {
+    background-image: url(logo-three.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7.4rem;
+    width: 7.4rem;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.4rem;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+    color: var(--hover-links);
+    transition: 200ms ease-in-out;
+}
+
+a,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+/* SECTION MAIN */
+
+.conteiner-main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 2.4rem;
+    height: 85vh;
+    background-color: var(--bg-primary);
+}
+
+.box-1 {
+    /* background-color: rgba(0, 0, 255, 0.265); */
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: .6rem;
+}
+
+.box-2 {
+    background-color: #24242408;
+    padding: 4rem;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 9%;
+    border-bottom-left-radius: 18%;
+    border-bottom-right-radius: 8%;
+
+}
+
+
+.box-2 .img-primary-main {
+    background-image: url(img-primary-main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 26rem;
+    width: 26rem;
+}
+
+
+h1 {
+    font-size: 3.8rem;
+    color: var(--hover-links);
+}
+
+p {
+    color: rgba(8, 8, 8, 0.520);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.btn {
+    /* background-color: var(--hover-links); */
+    background-color: rgba(8, 8, 8, 0.800);
+    border-radius: .2rem;
+    text-align: center;
+    width: 250px;
+    padding: .9rem 4rem;
+    color: rgb(248, 248, 248);
+    margin-top: 1rem;
+    transition: 300ms ease-in-out;
+}
+
+hr,
+i {
+    display: none;
+}
+
+.btn:hover {
+    background-color: var(--hover-links);
+    box-shadow: 0px 0px 4px 0px rgba(8, 8, 8, 0.520);
+}
+
+/* END SECTION MAIN */
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 1000px) {
+
+    header nav ul li a:hover {
+        color: var(--bg-primary)
+    }
+
+
+    .hamburger {
+        height: 24px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: .2rem;
+        cursor: pointer;
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header {
+        padding: .6rem 1.2rem;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background-color: var(--hover-links);
+        padding: 2rem 1.2rem;
+        top: 8.2rem;
+
+    }
+
+    hr {
+        border: 1px solid var(--bg-primary);
+        margin-top: 2rem;
+        margin-bottom: 1.6rem;
+    }
+
+    hr,
+    i {
+        display: block;
+    }
+
+    i {
+        font-size: 1.6rem;
+        transition: 200ms ease-in-out;
+        cursor: pointer;
+    }
+
+    i:hover {
+        color: var(--bg-primary);
+    }
+
+
+
+    ul {
+        flex-direction: column;
+    }
+
+    .a_links {
+        /* border-bottom: 1px solid var(--bg-primary); */
+        width: 100%;
+        letter-spacing: 2px;
+        padding-bottom: .2rem;
+    }
+
+
+    .conteiner-main {
+        /* background-color: aqua; */
+        padding: 1rem 1rem;
+        justify-content: start;
+        height: max-content;
+        flex-direction: column;
+    }
+
+
+}
+
+/* END MEDIA QUERIES */
