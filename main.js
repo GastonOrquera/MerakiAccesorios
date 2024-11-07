@@ -6,4 +6,10 @@ hamburger.addEventListener('click', () => {
 
     nav.classList.toggle('active');
 
+    a_links.forEach((e) => {
+        e.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    });
+
 });
